@@ -1,0 +1,25 @@
+{
+  "name": "content-rewrite-workspace",
+  "version": "1.0.0",
+  "description": "Demo if how one might be able to use github pages to rework gov dot uk content pages",
+  "scripts": {
+    "start": "eleventy --serve",
+    "build": "eleventy"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/rnwolf/content-rewrite-workspace.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "module",
+  "bugs": {
+    "url": "https://github.com/rnwolf/content-rewrite-workspace/issues"
+  },
+  "homepage": "https://github.com/rnwolf/content-rewrite-workspace#readme",
+  "dependencies": {
+    "@11ty/eleventy": "^3.1.2",
+    "@x-govuk/govuk-eleventy-plugin": "^8.3.0"
+  }
+}
