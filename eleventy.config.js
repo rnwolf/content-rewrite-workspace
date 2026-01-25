@@ -1,6 +1,6 @@
 import { govukEleventyPlugin } from '@x-govuk/govuk-eleventy-plugin'
 
-export default function(eleventyConfig) {
+export default function (eleventyConfig) {
   // Register the plugin with custom overrides
   eleventyConfig.addPlugin(govukEleventyPlugin, {
     // Remove the Crown and GOV.UK logotype
@@ -27,6 +27,7 @@ export default function(eleventyConfig) {
   eleventyConfig.addPassthroughCopy("src/robots.txt");
 
   return {
+    pathPrefix: "/content-rewrite-workspace/",
     dataTemplateEngine: 'njk',
     htmlTemplateEngine: 'njk',
     markdownTemplateEngine: 'njk',
