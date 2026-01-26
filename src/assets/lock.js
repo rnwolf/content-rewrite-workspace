@@ -1,6 +1,6 @@
 (function () {
   // Configuration
-  var PASSWORD = "password"; // Set your password here
+  var PASSWORD = "Let me in!2026"; // Set your password here
   var SESSION_KEY = "content_workspace_auth";
 
   // Check if user is already authenticated
