@@ -27,7 +27,7 @@ export default function (eleventyConfig) {
   eleventyConfig.addPassthroughCopy("src/robots.txt");
 
   // Lock configuration
-  const ENABLE_LOCK = true;
+  const ENABLE_LOCK = false;
   const PATH_PREFIX = "/content-rewrite-workspace/";
 
   if (ENABLE_LOCK) {
