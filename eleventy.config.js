@@ -26,8 +26,21 @@ export default function (eleventyConfig) {
   eleventyConfig.addPassthroughCopy("src/assets");
   eleventyConfig.addPassthroughCopy("src/robots.txt");
 
+  // Lock configuration
+  const ENABLE_LOCK = true;
+  const PATH_PREFIX = "/content-rewrite-workspace/";
+
+  if (ENABLE_LOCK) {
+    eleventyConfig.addTransform("lock-script", function (content) {
+      if (this.page.outputPath && this.page.outputPath.endsWith(".html")) {
+        return content.replace("</body>", `<script src="${PATH_PREFIX}assets/lock.js"></script></body>`);
+      }
+      return content;
+    });
+  }
+
   return {
-    pathPrefix: "/content-rewrite-workspace/",
+    pathPrefix: PATH_PREFIX,
     dataTemplateEngine: 'njk',
     htmlTemplateEngine: 'njk',
     markdownTemplateEngine: 'njk',
