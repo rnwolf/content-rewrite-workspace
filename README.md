@@ -39,3 +39,32 @@ All the content for the site, is in `docs` folder.
 To generate a site, type the following command:
 
 `npx eleventy --serve`
+
+## Publish site to public Github URL
+
+The Github action deploy.yml will deploy the static site to the following URL:
+
+`https://<username>.github.io/<repository-name>`
+
+https://rnwolf.github.io/content-rewrite-workspace
+
+## How to provide very basic access control
+
+Sometimes you don't what the general public to get access to a test site.
+
+The file `eleventy.config.js` has a configuration option to enable the pages to be passwprd protected. It is not intented to be be robust just prevent users for acidentlally discovering content that is in development.
+
+```
+  // Lock configuration
+  const ENABLE_LOCK = false;
+```
+Set to `true` or `false` as required.
+
+The password is also hardcoded into the Javascript file that is used to block access to the website.
+
+The file `lock.js` in the assets folder can be updated to change the password.
+
+```
+  // Configuration
+  var PASSWORD = "Let me in!2026"; // Set your password here
+```
